@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
              public void onClick(View view) {
                  if(TextUtils.isEmpty(loginName.getText().toString()) || TextUtils.isEmpty(loginPassword.getText().toString())) {
 
-                     String message = "All inputs required";
+                     String message = "Заполните поля!";
                      Toast.makeText(LoginActivity.this, message,Toast.LENGTH_LONG).show();
 
                  }else{

@@ -10,10 +10,14 @@
         <entry key="..\:/studio/Probablythis/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/studio/Probablythis/app/src/main/res/layout/activity_splach.xml" value="0.1" />
         <entry key="..\:/studio/Probablythis/app/src/main/res/layout/login_layout.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.14842958459979735" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14842958459979735" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.14842958459979735" />
+        <entry key="app/src/main/res/layout/activity_splach.xml" value="0.14842958459979735" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
