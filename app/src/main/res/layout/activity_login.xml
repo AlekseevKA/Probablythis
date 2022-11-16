@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <EditText
-            android:id="@+id/loginName"
+            android:id="@+id/loginEmail"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:backgroundTint="@android:color/white"

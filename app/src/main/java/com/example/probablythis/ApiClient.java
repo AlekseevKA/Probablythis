@@ -30,7 +30,18 @@ public class ApiClient {
             }
         });
 
-
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
+            @Override
+            public Response intercept(Chain chain) throws IOException {
+                String token = "OTZjNGEwMjctZjhkNi00MjhlLTljMGEtMDM4ODhjZGMxOTI3";
+                Request newRequest  = chain.request().newBuilder()
+                        .header("Accept", "application/json")
+                        .header("Authorization", "auth-token")
+                      //  .method(newRequest.method(), newRequest.body())
+                        .build();
+                return chain.proceed(newRequest);
+            }
+        }).build();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())

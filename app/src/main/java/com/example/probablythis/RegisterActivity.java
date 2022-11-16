@@ -32,14 +32,36 @@ public class RegisterActivity extends AppCompatActivity {
         loginButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(mainEmail.getText().toString()) || TextUtils.isEmpty(mainName.getText().toString()) || TextUtils.isEmpty(mainPassword.getText().toString())){
+                if(TextUtils.isEmpty(mainEmail.getText().toString()) /*|| TextUtils.isEmpty(mainName.getText().toString()) || TextUtils.isEmpty(mainPassword.getText().toString())*/){
 
 
-                    String message = "All inputs required";
+                   // String message = "Заполните поля!";
+                    String message = "Введите Email!";
+
                     Toast.makeText(RegisterActivity.this, message,Toast.LENGTH_LONG).show();
 
 
-                }else {
+                }else if(TextUtils.isEmpty(mainName.getText().toString())){
+
+
+                    String message = "Введите имя!";
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_LONG).show();
+
+                }
+                else if(TextUtils.isEmpty(mainPassword.getText().toString())){
+
+
+                    String message = "Введите пароль!";
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_LONG).show();
+
+                }
+                else if((mainPassword.getText().length() <= 8)){
+                    String message = "Пароль должен состоять из 8 или более символов!";
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_LONG).show();
+                }
+
+
+                else {
                     RegisterRequest registerRequest = new RegisterRequest();
                     registerRequest.setEmail(mainEmail.getText().toString());
                     registerRequest.setPassword(mainPassword.getText().toString());
